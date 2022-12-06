@@ -9,6 +9,7 @@ var myName = "nico";
 
 /***********Block Scope**************/
 
+/*
 if(true) {
     var hello1 = "hi";
 }
@@ -33,3 +34,5 @@ if(true) {
 }
     let hello4 = "hi";
 console.log(hello4)
+*/
+
