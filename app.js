@@ -36,3 +36,30 @@ if(true) {
 console.log(hello4)
 */
 
+/******** Arrow Functions******** */
+
+const hello = function(arg){
+
+}
+
+const names = ["nico","lynn","flynn"];
+/*
+const hearts = names.map(function(item){
+    return item + "❤️";
+});
+
+console.log(hearts);
+*/
+const hearts = names.map((item, index) => {
+    console.log("we are on " + index)
+    return item + "❤️";
+});
+
+
+const hearts2 = names.map(item => item + "❤️"); //Implicit return
+
+const hearts3 = names.map(item => {item + "❤️"});
+
+console.log(hearts);
+console.log(hearts2);
+console.log(hearts3);
