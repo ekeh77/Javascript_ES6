@@ -37,19 +37,19 @@ console.log(hello4)
 */
 
 /******** Arrow Functions******** */
-
+/*
 const hello = function(arg){
 
 }
 
 const names = ["nico","lynn","flynn"];
-/*
+
 const hearts = names.map(function(item){
     return item + "❤️";
 });
 
 console.log(hearts);
-*/
+
 const hearts = names.map((item, index) => {
     console.log("we are on " + index)
     return item + "❤️";
@@ -63,3 +63,49 @@ const hearts3 = names.map(item => {item + "❤️"});
 console.log(hearts);
 console.log(hearts2);
 console.log(hearts3);
+*/
+
+/******** 'this' in Arrow Functions******** */
+
+const button = document.querySelector("button");
+
+button.addEventListener("click", function(){
+    console.log(this); //button
+    this.style.backgroundColor = "red";
+    console.log("i have been clicked");
+});
+
+button.addEventListener("click", () => {
+    console.log(this); //button
+    this.style.backgroundColor = "red";
+})
+
+const handleClick = () => {
+    console.log(this); // window
+}
+
+const nico = {
+    name: "Nico",
+    age: 24,
+    addYear: () => {
+        this.age++;
+    }
+}
+
+console.log(nico);
+nico.addYear();
+nico.addYear();
+console.log(nico);
+
+const nico2 = {
+    name: "Nico",
+    age: 24,
+    addYear() {
+        this.age++;
+    }
+}
+
+console.log(nico2);
+nico.addYear();
+nico.addYear();
+console.log(nico2);
