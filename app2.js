@@ -24,4 +24,4 @@ const cleaned3 = email.map((email, index) => ({
     , index
 }));
 
-
+console.table(cleaned3);

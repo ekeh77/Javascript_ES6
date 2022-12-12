@@ -66,7 +66,7 @@ console.log(hearts3);
 */
 
 /******** 'this' in Arrow Functions******** */
-
+/*
 const button = document.querySelector("button");
 
 button.addEventListener("click", function(){
@@ -109,3 +109,17 @@ console.log(nico2);
 nico.addYear();
 nico.addYear();
 console.log(nico2);
+*/
+
+/*****************Default Values************ */
+
+const DEFAULT = "lalalala"
+
+const sayHi2 = (aName = DEFAULT) => "hello " + aName;
+
+function sayHi(aName = "anon") {
+    //return "Hello " + (aName || " anon");
+    return "Hello " + aName;
+}
+
+console.log(sayHi());
