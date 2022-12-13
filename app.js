@@ -112,7 +112,7 @@ console.log(nico2);
 */
 
 /*****************Default Values************ */
-
+/*
 const DEFAULT = "lalalala"
 
 const sayHi2 = (aName = DEFAULT) => "hello " + aName;
@@ -123,3 +123,15 @@ function sayHi(aName = "anon") {
 }
 
 console.log(sayHi());
+*/
+
+/***********Sexy Strings****** */
+const sayHi = (aName = "anon") => `hello ${aName} lovely to have you`;
+
+console.log(sayHi());
+
+console.log(`hello how ar you ${1000 * 100}`);
+
+const add = (a, b) => a + b;
+
+console.log(`hello how ar you ${add(6, 6)}`);
