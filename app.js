@@ -138,9 +138,9 @@ const add = (a, b) => a + b;
 console.log(`hello how ar you ${add(6, 6)}`);
 */
 /***************HTML Fragments********** */
-
-const wrapper = document.querySelector(".wrapper");
 /*
+const wrapper = document.querySelector(".wrapper");
+
 const addWelcome = () => {
     const div = document.createElement("div");
     const h1 = document.createElement("h1");
@@ -149,7 +149,7 @@ const addWelcome = () => {
     div.append(h1);
     wrapper.append(div);
 }
-*/
+
 const addWelcome = () => {
     const div = `
         <div class="hello">
@@ -165,4 +165,21 @@ console.log(`
 
 `);
 
-setTimeout(addWelcome, 5000)
+setTimeout(addWelcome, 5000);
+*/
+
+/*************** HTML Fragments part Two ************************ */
+
+const wrapper = document.querySelector(".wrapper");
+
+const friends = ["me", "lynn", "dal", "mark"];
+
+const list = `
+    <h1>People i love</h1>
+    <ul>
+        ${friends.map(friend => `<li>${friend}</li>`).join("")}
+    </ul>
+`
+
+
+wrapper.innerHTML = list;
