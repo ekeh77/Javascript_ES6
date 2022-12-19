@@ -184,7 +184,7 @@ const list = `
 wrapper.innerHTML = list;
 */
 /**********************Cloning Styled Components*************************** */
-
+/*
 const styled = (aElement) => {
     const el = document.createElement(aElement);
     return args => {
@@ -206,3 +206,17 @@ const subtitle = styled("span")`
 title.innerText = "We just cloned";
 subtitle.innerText = "Styled Components";
 console.log(title, subtitle)
+*/
+
+/************************More String Improvements!******************************* */
+const isEmail = email => email.includes("@");
+console.log(isEmail("nico@nomadcoders.co"));
+
+const CC_NUMBER = "6060";
+const displayName = `${"*".repeat(10)}${CC_NUMBER}`;
+console.log(displayName);
+
+const name = "Mr. Nicolas"
+console.log(name.startWith("Mr"));
+console.log(name.endWith("Nicolas"));
+
