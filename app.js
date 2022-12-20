@@ -209,6 +209,7 @@ console.log(title, subtitle)
 */
 
 /************************More String Improvements!******************************* */
+/*
 const isEmail = email => email.includes("@");
 console.log(isEmail("nico@nomadcoders.co"));
 
@@ -219,4 +220,16 @@ console.log(displayName);
 const name = "Mr. Nicolas"
 console.log(name.startWith("Mr"));
 console.log(name.endWith("Nicolas"));
+*/
+
+/*************************Array.from() and Array.of()******************* */
+//const friends = ["nico", "lynn", "dal", "mark"];
+const friends = Array.of("nico", "lynn", "dal", "mark");
+console.log(friends);
+
+const button = document.querySelectorAll("button");
+
+Array.from(button).forEach(button => {
+    button.addEventListener("click", () => console.log("I been clicked"));
+})
 
