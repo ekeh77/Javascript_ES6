@@ -224,6 +224,7 @@ console.log(name.endWith("Nicolas"));
 
 /*************************Array.from() and Array.of()******************* */
 //const friends = ["nico", "lynn", "dal", "mark"];
+/*
 const friends = Array.of("nico", "lynn", "dal", "mark");
 console.log(friends);
 
@@ -232,4 +233,36 @@ const button = document.querySelectorAll("button");
 Array.from(button).forEach(button => {
     button.addEventListener("click", () => console.log("I been clicked"));
 })
+*/
+
+/*******************Array.find() Array.findIndex() Array.fill()*********** */
+const friends = [
+    "nico@gmail.com",
+    "lynn@naver.com",
+    "dal@yahoo.com",
+    "mark@hotmail.com",
+    "flynn@gorea.com"
+];
+
+const target = friends.find(friend => friend.includes("@gorea.com"));
+console.log(target);
+
+const target2 = friends.findIndex(friend => friend.includes("@gorea.com"));
+console.log(target2);
+
+const username = friends[target2].split("@")[0];
+
+const email = "korea.com";
+
+console.log(`${username}@${email}`);
+
+friends[target2] = `${username}@${email}`
+
+friends.fill("*".repeat(5), 4);
+
+friends.fill("*".repeat(5), 1, 3);
+
+console.log(friends)
+
+console.log(friends.includes("nico@gmail.com"));
 
