@@ -236,6 +236,7 @@ Array.from(button).forEach(button => {
 */
 
 /*******************Array.find() Array.findIndex() Array.fill()*********** */
+/*
 const friends = [
     "nico@gmail.com",
     "lynn@naver.com",
@@ -265,4 +266,28 @@ friends.fill("*".repeat(5), 1, 3);
 console.log(friends)
 
 console.log(friends.includes("nico@gmail.com"));
+*/
+/************Object Destructuring******************** */
 
+const settings = {
+    notifications : {
+        //follow : true,
+        alerts : true,
+        unfollw : false
+    },
+    color : {
+        theme : "dark"
+    }
+}
+
+if(settings.notifications.follow){
+    //send email
+}
+
+const {
+    notifications : {follow = false} = {},
+    color
+} = settings; 
+
+console.log(follow);
+console.log(color);
