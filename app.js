@@ -268,7 +268,7 @@ console.log(friends)
 console.log(friends.includes("nico@gmail.com"));
 */
 /************Object Destructuring******************** */
-
+/*
 const settings = {
     notifications : {
         //follow : true,
@@ -291,3 +291,16 @@ const {
 
 console.log(follow);
 console.log(color);
+*/
+/*********Array Destructuring******* */
+const days = () => ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+
+/*
+const mon = days[0];
+const tue = days[1];
+const wed = days[2];
+*/
+
+const [mon, tue, wed, test = "Test"] = days();
+
+console.log(mon, tue, wed, test);
