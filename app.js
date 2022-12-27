@@ -293,14 +293,32 @@ console.log(follow);
 console.log(color);
 */
 /*********Array Destructuring******* */
+/*
 const days = () => ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 
-/*
+
 const mon = days[0];
 const tue = days[1];
 const wed = days[2];
-*/
+
 
 const [mon, tue, wed, test = "Test"] = days();
 
 console.log(mon, tue, wed, test);
+*/
+/*****************Renaming ************* */
+const settings = {
+    color : {
+        chosen_color : "darl"
+    }
+};
+
+let chosenColor = "blue";
+
+({
+    color : { chosen_color : chosenColor = "light" }
+} = settings);
+
+//const chosenColor = settings.color.chosen_color || "light";
+
+console.log(chosen_color);
