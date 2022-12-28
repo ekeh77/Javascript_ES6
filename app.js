@@ -307,6 +307,7 @@ const [mon, tue, wed, test = "Test"] = days();
 console.log(mon, tue, wed, test);
 */
 /*****************Renaming ************* */
+/*
 const settings = {
     color : {
         chosen_color : "darl"
@@ -322,3 +323,23 @@ let chosenColor = "blue";
 //const chosenColor = settings.color.chosen_color || "light";
 
 console.log(chosen_color);
+*/
+/**********Function Destructuring*** */
+
+function saveSettings(follwAlert, unfollwAlert, mrkAlert, themeColor){
+    console.log(settings);
+}
+
+function saveSettings({follw, alert, color = "blue"}){
+    if(!settings.mkt){
+
+
+    }
+}
+
+saveSettings({
+    follw : true,
+    alert : true,
+    mkt: true,
+    color : "green"
+});
