@@ -325,7 +325,7 @@ let chosenColor = "blue";
 console.log(chosen_color);
 */
 /**********Function Destructuring*** */
-
+/*
 function saveSettings(follwAlert, unfollwAlert, mrkAlert, themeColor){
     console.log(settings);
 }
@@ -343,3 +343,16 @@ saveSettings({
     mkt: true,
     color : "green"
 });
+*/
+
+/*******************Value Shorthands***************/
+
+const follow = checkFollow();
+const alert = checkAlert();
+
+const settings = {
+    notification : {
+        follow,
+        alert
+    }
+};
