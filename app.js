@@ -346,7 +346,7 @@ saveSettings({
 */
 
 /*******************Value Shorthands***************/
-
+/*
 const follow = checkFollow();
 const alert = checkAlert();
 
@@ -356,3 +356,15 @@ const settings = {
         alert
     }
 };
+*/
+
+/***********Swapping and Skipping*********** */
+let mon = "Sat";
+let sat = "Mon";
+
+[sat, mon] = [mon, set];
+
+const days = ["mon", "tue", "wed", "thu", "fri"];
+
+const [,,,thu,fri] = days;
+console.log(thu, fri);
