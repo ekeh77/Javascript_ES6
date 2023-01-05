@@ -372,6 +372,7 @@ console.log(thu, fri);
 */
 
 /************ Introduction to Spread *************/
+/*
 const friends = [1, 2, 3, 4];
 const family = ["a", "b", "c"];
 console.log(friends);
@@ -391,3 +392,35 @@ const hello = {
 
 console.log({sexy, hello});
 console.log({...sexy, ...hello});
+*/
+
+/*****************Spread Applications********** */
+const friends = ["nico", "lynn"];
+
+const newFriends = [...friends, "dal"];
+
+console.log(newFriends);
+
+const nico = {
+    username : "nico"
+};
+
+console.log({...nico, password : 123});
+
+const first = ["mon", "tue", "wed"];
+
+const weekend = ["sat", "sun"];
+
+const fulWeek = [...first, "thu", "fri", ...weekend];
+
+console.log(fulWeek);
+
+const lastName = prompt("Last name");
+
+const user = {
+    username : "nico",
+    age : 24,
+    ...(lastName !== "" && { lastName })
+};
+
+console.log(user);
