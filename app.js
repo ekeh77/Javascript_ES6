@@ -395,6 +395,7 @@ console.log({...sexy, ...hello});
 */
 
 /*****************Spread Applications********** */
+/*
 const friends = ["nico", "lynn"];
 
 const newFriends = [...friends, "dal"];
@@ -424,3 +425,15 @@ const user = {
 };
 
 console.log(user);
+*/
+
+/*********Intro to Rest Parameters************* */
+const infiniteArgs = (...kimchi) => console.log(kimchi);
+
+infiniteArgs("1", 2, true, "lalala", [1,2,3,4])
+
+const bestFriendMaker = (firstOne, ...potato) => {
+    console.log(`My best friend is ${firstOne}`);
+    console.log(potato);
+}
+bestFriendMaker("nic", "lynn", "dal", "japan");
