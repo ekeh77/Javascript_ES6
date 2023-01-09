@@ -428,6 +428,7 @@ console.log(user);
 */
 
 /*********Intro to Rest Parameters************* */
+/*
 const infiniteArgs = (...kimchi) => console.log(kimchi);
 
 infiniteArgs("1", 2, true, "lalala", [1,2,3,4])
@@ -437,3 +438,28 @@ const bestFriendMaker = (firstOne, ...potato) => {
     console.log(potato);
 }
 bestFriendMaker("nic", "lynn", "dal", "japan");
+*/
+/**********Rest + Spread + Destructure Magic***** */
+const user = {
+    NAME : "nico",
+    age : 24,
+    password : 12345
+};
+
+user["password"] = null;
+
+console.log(user);
+
+const killPassword = ({password, ...rest}) => rest;
+
+const cleanUser = killPassword(user);
+
+console.log(cleanUser);
+
+const setCountry = ({country = "KR", ...rest}) => ({country, ...rest});
+
+console.log(setCountry(user));
+
+const rename = ({NAME:name, ...rest}) => ({name, ...rest});
+
+console.log(rename(user));
