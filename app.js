@@ -440,6 +440,7 @@ const bestFriendMaker = (firstOne, ...potato) => {
 bestFriendMaker("nic", "lynn", "dal", "japan");
 */
 /**********Rest + Spread + Destructure Magic***** */
+/*
 const user = {
     NAME : "nico",
     age : 24,
@@ -463,3 +464,29 @@ console.log(setCountry(user));
 const rename = ({NAME:name, ...rest}) => ({name, ...rest});
 
 console.log(rename(user));
+*/
+
+/*********** *For ... of***************/
+const friends = ["Nico", "Lynn", "ha", "hu"];
+
+for(let i = 0; i < friends.length; i++){
+    console.log(`${friends[i]} I love Kimchi`);
+}
+
+const addHeart = (c, i, a) => console.log(c, i, a);
+
+friends.forEach(addHeart);
+
+friends.forEach(friend => console.log(friend));
+
+for (const friend of friends){
+    if(friend == "ha"){
+        break;
+    }else{
+        console.log(friend);
+    }
+}
+
+for (const letter of "hello"){
+    console.log(letter);
+}
