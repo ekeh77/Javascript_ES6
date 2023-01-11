@@ -467,6 +467,7 @@ console.log(rename(user));
 */
 
 /*********** *For ... of***************/
+/*
 const friends = ["Nico", "Lynn", "ha", "hu"];
 
 for(let i = 0; i < friends.length; i++){
@@ -490,3 +491,10 @@ for (const friend of friends){
 for (const letter of "hello"){
     console.log(letter);
 }
+*/
+
+/*************Introduction to Async***** */
+const hello = fetch("http://google.com");
+
+console.log("something");
+console.log(hello);
