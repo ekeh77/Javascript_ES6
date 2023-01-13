@@ -502,7 +502,7 @@ console.log(hello);
 */
 
 /************Creating Promises******** */
-
+/*
 const amISexy = new Promise((resolve, reject) => {
     setTimeout(resolve, 3000, "Yes you are!")
 });
@@ -510,3 +510,15 @@ const amISexy = new Promise((resolve, reject) => {
 console.log(amISexy);
 
 setInterval(console.log, 1000, amISexy);
+*/
+/**********Using Promises********* */
+const amISexy = new Promise((resolve, reject) => {
+    resolve("Yes you are!");
+    reject("You are ugly");
+});
+
+const thenFn = value => console.log(value);
+
+amISexy
+    .then(thenFn)
+    .catch(value => console.log(value));
