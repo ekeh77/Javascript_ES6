@@ -512,6 +512,7 @@ console.log(amISexy);
 setInterval(console.log, 1000, amISexy);
 */
 /**********Using Promises********* */
+/*
 const amISexy = new Promise((resolve, reject) => {
     resolve("Yes you are!");
     reject("You are ugly");
@@ -522,3 +523,23 @@ const thenFn = value => console.log(value);
 amISexy
     .then(thenFn)
     .catch(value => console.log(value));
+    */
+
+/***************Chaining Promises************* */
+const amISexy = new Promise((resolve, reject) => {
+    resolve(2);
+})
+
+const timesTwo = (number) => number * 2;
+
+amISexy
+    .then(timesTwo)
+    .then(timesTwo)
+    .then(timesTwo)
+    .then(timesTwo)
+    .then(timesTwo)
+    .then(() => {
+        throw Error("Something is worng");
+    })
+    .then(lastNumber => console.log(lastNumber))
+    .catch(error => console.log(error));
