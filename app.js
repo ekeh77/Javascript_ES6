@@ -565,7 +565,7 @@ const motherPromise = Promise.all([p1, p2, p3]);
 motherPromise.then(values => console.log(values)).catch(error => console.log(error));
 */
 /***********Promise.race*** */
-
+/*
 const p1 = new Promise((resolve) => {
     setTimeout(resolve, 5000, "First");
 });
@@ -579,3 +579,11 @@ const p3 = new Promise((resolve) => {
 });
 
 Promise.race([p1, p2, p3]).then(values => console.log(values)).catch(error => console.log(error));
+*/
+/****************finally ****** */
+const p1 = new Promise(resolve, reject => {
+    setTimeout(reject, 5000, "First")
+})
+.then(value => console.log(value))
+.catch(e => console.log(`${e}❌`))
+.finally(() => console.log("Im done"));
