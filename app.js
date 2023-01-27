@@ -601,6 +601,7 @@ fetch("https://yts.am/api/v2/list_movies.json")
     */
 
 /*********Async Await************* */
+/*
 const getMoviesPromise = () => {
     fetch("https://yts.am/api/v2/list_movies.json")
     .then(response => {
@@ -621,4 +622,20 @@ getMoviesAsync();
 
 async function getMovies2() {
 
+}
+*/
+/*********try catch finally**************** */
+
+const getMoviesAsync2 = async() => {
+        try {
+            const response = await fetch("https://yts.am/api/v2/listmovies.json");
+            const json = await response.json();
+            throw Error("Im hungry");
+            console.log(json);
+        } catch(e){
+            console.log(e);
+        } finally {
+            console.log("We are done!");
+        }
+    
 }
