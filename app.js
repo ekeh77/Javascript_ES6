@@ -625,7 +625,7 @@ async function getMovies2() {
 }
 */
 /*********try catch finally**************** */
-
+/*
 const getMoviesAsync2 = async() => {
         try {
             const response = await fetch("https://yts.am/api/v2/listmovies.json");
@@ -639,3 +639,28 @@ const getMoviesAsync2 = async() => {
         }
     
 }
+*/
+
+/************Parallel Async Await********* */
+const getMoviesAsync2 = async() => {
+    try {
+        const [moviesResponse, suggestionsResponse] = await Promise.all([
+            fetch("https://yts.am/api/v2/list_movies.json"), 
+            fetch("https://yts.mx/api/v2/movie_suggestions.json?movie_id=100")
+        ]); 
+
+        const [movies, suggestions] = await Promise.all([
+            moviesResponse.json(),
+            suggestionsResponse.json()
+        ])
+        
+        console.log(movies, suggestions);
+    } catch(e){
+        console.log(e);
+    } finally {
+        console.log("We are done!");
+    }
+
+}
+
+getMoviesAsync2();
