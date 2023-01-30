@@ -642,6 +642,7 @@ const getMoviesAsync2 = async() => {
 */
 
 /************Parallel Async Await********* */
+/*
 const getMoviesAsync2 = async() => {
     try {
         const [moviesResponse, suggestionsResponse] = await Promise.all([
@@ -664,3 +665,38 @@ const getMoviesAsync2 = async() => {
 }
 
 getMoviesAsync2();
+*/
+
+/************Introduction to Classes******* */
+class User {
+    constructor(name) {
+        this.username = name;
+    }
+    sayHello() {
+        console.log(`Hello, my name is ${this.username}`);
+    }
+}
+
+const sexyUser = new User("Nico");
+
+console.log(sexyUser.username);
+
+setTimeout(sexyUser.sayHello, 4000);
+
+const uglyUser = new User("las");
+
+uglyUser.sayHello();
+
+const baseObject = {
+    username : "Nicolas",
+    sayHello : function () {
+        console.log("Hello, I'm Nicolas");
+    }
+}
+
+const sexyUser2 = baseObject;
+const uglyUser2 = baseObject;
+
+sexyUser2.sayHello();
+uglyUser2.sayHello();
+
