@@ -668,6 +668,7 @@ getMoviesAsync2();
 */
 
 /************Introduction to Classes******* */
+/*
 class User {
     constructor(name) {
         this.username = name;
@@ -699,4 +700,50 @@ const uglyUser2 = baseObject;
 
 sexyUser2.sayHello();
 uglyUser2.sayHello();
+*/
+/*************************Extending Classes***** */
+class User {
+    constructor(name, lastName, email, password) {
+        this.username = name;
+        this.lastName = lastName;
+        this.email = email;
+        this.password = password;
+    }
+    sayHello() {
+        console.log(`Hello, my name is ${this.username}`);
+    }
 
+    getProfile() {
+        console.log(`${this.username} ${this.email} ${this.password}`);
+    }
+
+    updatePassword(newPassword, currentPassword){
+        if(currentPassword === this.password){
+            this.password = newPassword;
+        }else{
+            console.log("Can't change password.");
+        }
+    }
+}
+
+const sexyUser = new User("Nico", "Serrano", "nico@com", "1234");
+
+sexyUser.getProfile();
+console.log(sexyUser.password);
+sexyUser.updatePassword("hello", "1234");
+console.log(sexyUser.password);
+
+class Admin extends User{
+    constructor(superadmin) {
+        this.superadmin = superadmin;
+    }
+    deleteWebsite(){
+        console.log("Deleting the whole website...");
+    }
+}
+
+const sexyAdmin = new Admin("Nico", "Serrano", "nico@com", "1234", ture);
+
+sexyAdmin.deleteWebsite();
+
+console.log(sexyAdmin.email);
