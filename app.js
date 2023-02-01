@@ -702,6 +702,7 @@ sexyUser2.sayHello();
 uglyUser2.sayHello();
 */
 /*************************Extending Classes***** */
+/*
 class User {
     constructor(name, lastName, email, password) {
         this.username = name;
@@ -747,3 +748,92 @@ const sexyAdmin = new Admin("Nico", "Serrano", "nico@com", "1234", ture);
 sexyAdmin.deleteWebsite();
 
 console.log(sexyAdmin.email);
+*/
+/**************super********** */
+
+class User {
+    constructor({username, lastName, email, password}) {
+        this.username = username;
+        this.lastName = lastName;
+        this.email = email;
+        this.password = password;
+    }
+    sayHello() {
+        console.log(`Hello, my name is ${this.username}`);
+    }
+
+    getProfile() {
+        console.log(`${this.username} ${this.email} ${this.password}`);
+    }
+
+    updatePassword(newPassword, currentPassword){
+        if(currentPassword === this.password){
+            this.password = newPassword;
+        }else{
+            console.log("Can't change password.");
+        }
+    }
+}
+
+const sexyUser = new User({
+    username:"Nico", 
+    lastName:"Serrano", 
+    email:"nico@com", 
+    password:"1234"
+});
+
+sexyUser.getProfile();
+console.log(sexyUser.password);
+sexyUser.updatePassword("hello", "1234");
+console.log(sexyUser.password);
+
+class Admin extends User{
+    constructor({username, lastName, email, password, superadmin, isActive}) {
+        super({username, lastName, email, password});
+        this.superadmin = superadmin;
+        this.isActive = isActive;
+    }
+    deleteWebsite(){
+        console.log("Deleting the whole website...");
+    }
+}
+
+const sexyAdmin = new Admin({
+    username:"Nico", 
+    lastName:"Serrano", 
+    email:"nico@com", 
+    password:"1234",
+    superadmin: true,
+    isActive: true
+});
+
+sexyAdmin.deleteWebsite();
+
+console.log(sexyAdmin.email);
+
+class Counter {
+    constructor({initialNumber = 0, counterId, plusId, minusId}) {
+        this.count = initialNumber;
+        this.counter = document.getElementById(counterId);
+        this.plusBtn = document.getElementById(plusId);
+        this.minusBtn = document.getElementById(minusId);
+        this.addEventListeners();
+    }
+    addEventListeners(){
+        this.plusBtn.addEventListener("click", this.increase);
+        this.minusBtn.addEventListener("click", this.decrease);
+    }
+    increase() {
+        this.count = this.count + 1;
+        this.repaintCount();
+    }
+    decrease() {
+        this.count = this.count - 1;
+        this.repaintCount();
+    }
+    repaintCount(){
+        this.counter.innerText = this.count
+    }
+}
+
+new Counter({counterId:"count", plusId:"add",  minusId:"minus"});
