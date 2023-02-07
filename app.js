@@ -750,7 +750,7 @@ sexyAdmin.deleteWebsite();
 console.log(sexyAdmin.email);
 */
 /**************super********** */
-
+/*
 class User {
     constructor({username, lastName, email, password}) {
         this.username = username;
@@ -839,3 +839,18 @@ class Counter {
 
 new Counter({counterId:"count", plusId:"add",  minusId:"minus"});
 new Counter({counterId:"count2", plusId:"add2",  minusId:"minus2", initialNumber:666});
+*/
+/*************Symbols ************************ */
+const hello = Symbol("hello");
+const bye = Symbol("hello");
+
+const superBig = {
+    [Symbol("nico")] : {
+        handsome : true
+    },
+    [Symbol("nico")] : {
+        handsome : true
+    },
+    hello : "bye"
+};
+
