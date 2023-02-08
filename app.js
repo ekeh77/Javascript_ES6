@@ -841,6 +841,7 @@ new Counter({counterId:"count", plusId:"add",  minusId:"minus"});
 new Counter({counterId:"count2", plusId:"add2",  minusId:"minus2", initialNumber:666});
 */
 /*************Symbols ************************ */
+/*
 const hello = Symbol("hello");
 const bye = Symbol("hello");
 
@@ -853,4 +854,27 @@ const superBig = {
     },
     hello : "bye"
 };
+*/
+/*****************Sets*****************/
+const user = {
+    age : 12,
+    name : "nico"  
+};
 
+user.onemore = true;
+
+user.name = null;
+
+const sexySet = new Set([1, 2, 3, 4, 5, 6, 7, 7, 7, 7, 8])
+
+sexySet.has(9);
+
+sexySet.delete(1);
+
+sexySet.clear();
+
+sexySet.add("Hi!");
+
+sexySet.add([1,2,3,4,5]);
+
+sexySet.size();
