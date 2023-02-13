@@ -856,6 +856,7 @@ const superBig = {
 };
 */
 /*****************Sets*****************/
+/*
 const user = {
     age : 12,
     name : "nico"  
@@ -878,3 +879,12 @@ sexySet.add("Hi!");
 sexySet.add([1,2,3,4,5]);
 
 sexySet.size();
+*/
+/*****************WeakSet ************** */
+const weakSet = new WeakSet();
+const sexy = {
+    im : true
+};
+
+weakSet.add(sexy);
+weakSet.add({hello:true});
