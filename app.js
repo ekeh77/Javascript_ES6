@@ -881,6 +881,7 @@ sexySet.add([1,2,3,4,5]);
 sexySet.size();
 */
 /*****************WeakSet ************** */
+/*
 const weakSet = new WeakSet();
 const sexy = {
     im : true
@@ -888,3 +889,17 @@ const sexy = {
 
 weakSet.add(sexy);
 weakSet.add({hello:true});
+*/
+/*****************Map and Weakmap********** */
+const map = new Map();
+
+map.set("age", 18);
+
+map.entries();
+
+map.has("age");
+map.get("age");
+
+const weakMap = new WeakMap();
+
+weakMap.set({"age":18});
