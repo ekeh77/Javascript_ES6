@@ -891,6 +891,7 @@ weakSet.add(sexy);
 weakSet.add({hello:true});
 */
 /*****************Map and Weakmap********** */
+/*
 const map = new Map();
 
 map.set("age", 18);
@@ -903,3 +904,27 @@ map.get("age");
 const weakMap = new WeakMap();
 
 weakMap.set({"age":18});
+*/
+/***************Generators*************** */
+function* listPeople(){
+    yield "Dal";
+    yield "Flynn";
+    yield "Mark";
+    yield "Godkimchi";
+    yield "Japan Guy";
+}
+
+const listG = listPeople();
+
+listG.next();
+listG.next();
+
+const friends = ["Dal", "Flynn", "Mark"];
+
+function* friendTeller(){
+    for(const friend of friends){
+        yield friend;
+    }
+}
+
+const friendLooper = friendTeller();
