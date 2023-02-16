@@ -906,6 +906,7 @@ const weakMap = new WeakMap();
 weakMap.set({"age":18});
 */
 /***************Generators*************** */
+/*
 function* listPeople(){
     yield "Dal";
     yield "Flynn";
@@ -928,3 +929,32 @@ function* friendTeller(){
 }
 
 const friendLooper = friendTeller();
+*/
+/***********Proxies ****************** */
+const userObj = {
+    username : "nico",
+    age : 12,
+    password : 1234
+};
+
+const userFilter = {
+    get : (target, prop, carrot) => {
+        //console.log("Somebody is getting something");
+        console.log(target);
+        console.log(prop);
+        console.log(carrot);
+        return prop === "password" ?  `${"*".repeat(5)}` : target[prop];
+    },
+    set : () => {
+        console.log("Somebody wrote something");
+    },
+    delete : (target, prop) => {
+        if(prop === "password"){
+            return;
+        }else{
+            target[prop] = "DELETED";
+        }
+    },
+};
+
+const filteredUser = new Proxy(userObj, userFilter);
