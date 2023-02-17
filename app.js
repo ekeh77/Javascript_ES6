@@ -931,6 +931,7 @@ function* friendTeller(){
 const friendLooper = friendTeller();
 */
 /***********Proxies ****************** */
+/*
 const userObj = {
     username : "nico",
     age : 12,
@@ -958,3 +959,5 @@ const userFilter = {
 };
 
 const filteredUser = new Proxy(userObj, userFilter);
+*/
+/**************************Should you learn proxies or generators?******** */
