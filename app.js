@@ -961,3 +961,4 @@ const userFilter = {
 const filteredUser = new Proxy(userObj, userFilter);
 */
 /**************************Should you learn proxies or generators?******** */
+/******************* ES2020 Introduction************ */
