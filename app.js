@@ -962,3 +962,12 @@ const filteredUser = new Proxy(userObj, userFilter);
 */
 /**************************Should you learn proxies or generators?******** */
 /******************* ES2020 Introduction************ */
+/******** New ?? Operator******************* */
+let name;
+
+//name = 0;
+name = "";
+
+console.log("hello", name || "anonymous");
+
+console.log("hello", name ?? "anonymous");
