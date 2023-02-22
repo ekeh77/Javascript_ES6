@@ -963,6 +963,7 @@ const filteredUser = new Proxy(userObj, userFilter);
 /**************************Should you learn proxies or generators?******** */
 /******************* ES2020 Introduction************ */
 /******** New ?? Operator******************* */
+/*
 let name;
 
 //name = 0;
@@ -971,3 +972,23 @@ name = "";
 console.log("hello", name || "anonymous");
 
 console.log("hello", name ?? "anonymous");
+*/
+/*******************Optional Chaining********** */
+const me = {
+    name : "nico",
+    profile : {
+        email : "@something.com"
+    }
+}
+
+console.log(me.profile.email);
+
+const lynn = {
+    name : "nico",
+}
+
+console.log(lynn.profile.email);
+
+console.log(lynn.profile && lynn.profile.email);
+
+console.log(lynn?.profile?.email?.provider?.name);
