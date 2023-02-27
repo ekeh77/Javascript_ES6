@@ -974,6 +974,7 @@ console.log("hello", name || "anonymous");
 console.log("hello", name ?? "anonymous");
 */
 /*******************Optional Chaining********** */
+/*
 const me = {
     name : "nico",
     profile : {
@@ -992,3 +993,18 @@ console.log(lynn.profile.email);
 console.log(lynn.profile && lynn.profile.email);
 
 console.log(lynn?.profile?.email?.provider?.name);
+*/
+/************padStart and padEnd*********************/
+let hours = 12;
+let minutes = 3;
+let seconds = 2;
+
+console.log(`${hours}h:${minutes < 10 ? `0${minutes}` : minutes}m:${seconds}s`)
+
+minutes = String(minutes).padStart(2, "0");
+
+console.log(`${hours}h:${minutes}m:${seconds}s`);
+
+"5".padEnd(5, "x");
+"1".padStart(2, "0").padEnd(3, "s");
+
