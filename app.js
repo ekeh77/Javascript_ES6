@@ -995,6 +995,7 @@ console.log(lynn.profile && lynn.profile.email);
 console.log(lynn?.profile?.email?.provider?.name);
 */
 /************padStart and padEnd*********************/
+/*
 let hours = 12;
 let minutes = 3;
 let seconds = 2;
@@ -1007,4 +1008,8 @@ console.log(`${hours}h:${minutes}m:${seconds}s`);
 
 "5".padEnd(5, "x");
 "1".padStart(2, "0").padEnd(3, "s");
-
+*/
+/************* trim, trimStart, trimEnd****** */
+"                        hello".trimStart();
+"           hello           ".trimEnd();
+"          hello        ".trim();
