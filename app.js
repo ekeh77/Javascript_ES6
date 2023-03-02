@@ -1010,6 +1010,17 @@ console.log(`${hours}h:${minutes}m:${seconds}s`);
 "1".padStart(2, "0").padEnd(3, "s");
 */
 /************* trim, trimStart, trimEnd****** */
+/*
 "                        hello".trimStart();
 "           hello           ".trimEnd();
 "          hello        ".trim();
+*/
+/*************Object entries, Object values,Object fromEntries */
+const person = {
+    name : "nico",
+    age : 12
+};
+Object.values(person);
+Object.entries(person);
+Object.entries(person).forEach(item => console.log(item[0], item[1]));
+Object.fromEntries(["name", "nico"], ["age", 12], ["food", "kimchi"], ["hello", true]);
