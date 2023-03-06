@@ -1016,6 +1016,7 @@ console.log(`${hours}h:${minutes}m:${seconds}s`);
 "          hello        ".trim();
 */
 /*************Object entries, Object values,Object fromEntries */
+/*
 const person = {
     name : "nico",
     age : 12
@@ -1024,3 +1025,9 @@ Object.values(person);
 Object.entries(person);
 Object.entries(person).forEach(item => console.log(item[0], item[1]));
 Object.fromEntries(["name", "nico"], ["age", 12], ["food", "kimchi"], ["hello", true]);
+*/
+
+/*****************Array flat***************** */
+let array = [1,2,3,4,5,6];
+let array2 = [1,[2], [ [8], [8], [ [ [8], [8],  [ [6], [5], [3] ] ] ] ] ]
+console.log(array2.flat(5))
