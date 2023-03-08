@@ -1028,6 +1028,36 @@ Object.fromEntries(["name", "nico"], ["age", 12], ["food", "kimchi"], ["hello", 
 */
 
 /*****************Array flat***************** */
+/*
 let array = [1,2,3,4,5,6];
 let array2 = [1,[2], [ [8], [8], [ [ [8], [8],  [ [6], [5], [3] ] ] ] ] ]
 console.log(array2.flat(5))
+*/
+
+const fruites = ["apple", "strawberry", "avocado"];
+
+const sortFruitByLength = (fruitA, fruitB) => {
+    console.log(fruitA, fruitB);
+    return fruitB.length - fruitA.length;
+}
+
+console.log(fruites.sort(sortFruitByLength));
+
+const people = [
+    {
+        name : "nico",
+        age : 12
+    },
+    {
+        name : "lynn",
+        age : 22
+    }
+]
+
+const orderPeopleByAge = (personA, personB) => {
+    return  personB.age - personA.age;
+}
+
+console.log(people);
+console.log(people.sort(orderPeopleByAge));
+console.log(people);
