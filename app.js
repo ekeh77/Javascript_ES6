@@ -1033,7 +1033,7 @@ let array = [1,2,3,4,5,6];
 let array2 = [1,[2], [ [8], [8], [ [ [8], [8],  [ [6], [5], [3] ] ] ] ] ]
 console.log(array2.flat(5))
 */
-
+/*
 const fruites = ["apple", "strawberry", "avocado"];
 
 const sortFruitByLength = (fruitA, fruitB) => {
@@ -1061,3 +1061,23 @@ const orderPeopleByAge = (personA, personB) => {
 console.log(people);
 console.log(people.sort(orderPeopleByAge));
 console.log(people);
+*/
+
+/****************Promise allSettled******** */
+const p = Promise.all([
+    fetch("http://yts.mx/api/v2/list_movies.json"),
+    fetch("http://yts.mx/api/v2/list_movies.json"),
+    fetch("http://yts.mx/api/v2/list_movies.json"),
+    fetch("http://yts.mx/api/v2/list_movies.json"),
+])
+.then(response => console.log("sucecces:",response))
+.catch(e => console.log("error:", e))
+
+const p2 = Promise.allSettled([
+    fetch("http://yts.mx/api/v2/list_movies.json"),
+    fetch(),
+    fetch("http://yts.mx/api/v2/list_movies.json"),
+    fetch(),
+])
+.then(response => console.log("sucecces:",response))
+.catch(e => console.log("error:", e))
