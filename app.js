@@ -1064,6 +1064,7 @@ console.log(people);
 */
 
 /****************Promise allSettled******** */
+/*
 const p = Promise.all([
     fetch("http://yts.mx/api/v2/list_movies.json"),
     fetch("http://yts.mx/api/v2/list_movies.json"),
@@ -1081,3 +1082,5 @@ const p2 = Promise.allSettled([
 ])
 .then(response => console.log("sucecces:",response))
 .catch(e => console.log("error:", e))
+*/
+/****************2022 Update Introduction********** */
