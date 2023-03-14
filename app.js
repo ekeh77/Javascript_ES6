@@ -1085,6 +1085,7 @@ const p2 = Promise.allSettled([
 */
 /****************2022 Update Introduction********** */
 /************************Logical OR Assignment********** */
+/*
 let name = prompt("what is your name");
 if(!name){
     name = "anonymous";
@@ -1095,3 +1096,17 @@ let name2 = prompt("what is your name");
 name2 ||= "anonymous";
 
 console.log(`Hello ${name2}`);
+*/
+/***********Logical AND Assignment********* */
+const user = {
+    username: 'nico',
+    password: 123
+};
+/*
+if(user.password){
+    user.password = "[secret]";
+}
+*/
+user.password &&= "[secret]";
+user.name ||= "nico";
+console.log(user);
