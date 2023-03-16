@@ -1098,6 +1098,7 @@ name2 ||= "anonymous";
 console.log(`Hello ${name2}`);
 */
 /***********Logical AND Assignment********* */
+/*
 const user = {
     username: 'nico',
     password: 123
@@ -1106,7 +1107,19 @@ const user = {
 if(user.password){
     user.password = "[secret]";
 }
-*/
+
 user.password &&= "[secret]";
 user.name ||= "nico";
+console.log(user);
+*/
+/******************Logical NULLISH Assignment****** */
+const user = {
+    username: "nico",
+    password: 123,
+    isAdmin: false
+};
+
+//user.isAdmin ||= true;
+user.isAdmin ??= true;
+
 console.log(user);
