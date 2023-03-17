@@ -1113,6 +1113,7 @@ user.name ||= "nico";
 console.log(user);
 */
 /******************Logical NULLISH Assignment****** */
+/*
 const user = {
     username: "nico",
     password: 123,
@@ -1123,3 +1124,8 @@ const user = {
 user.isAdmin ??= true;
 
 console.log(user);
+*/
+/***************Numeric Separators******* */
+const allTheMoney = 110_000_000_000_000_000_000_000_000_000_000_000.58;
+
+console.log(allTheMoney)
