@@ -1126,6 +1126,22 @@ user.isAdmin ??= true;
 console.log(user);
 */
 /***************Numeric Separators******* */
+/*
 const allTheMoney = 110_000_000_000_000_000_000_000_000_000_000_000.58;
 
-console.log(allTheMoney)
+console.log(allTheMoney);
+*/
+/************Promise any********** */
+const p1 = new Promis((resolve, reject) => {
+    setTimeout(() => {
+        reject("quick")
+    }, 1000);
+});
+
+const p2 = new Promis((resolve, reject) => {
+    setTimeout(reject, 5000, "slow");
+});
+
+Promise.all([p1,p2]).then(console.log).catch(console.log);
+
+Promise.any([p1,p2]).then(console.log).catch((e) => {console.log(e.errors)});
