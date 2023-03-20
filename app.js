@@ -1132,6 +1132,7 @@ const allTheMoney = 110_000_000_000_000_000_000_000_000_000_000_000.58;
 console.log(allTheMoney);
 */
 /************Promise any********** */
+/*
 const p1 = new Promis((resolve, reject) => {
     setTimeout(() => {
         reject("quick")
@@ -1145,3 +1146,17 @@ const p2 = new Promis((resolve, reject) => {
 Promise.all([p1,p2]).then(console.log).catch(console.log);
 
 Promise.any([p1,p2]).then(console.log).catch((e) => {console.log(e.errors)});
+*/
+/**********replaceAll ************ */
+const  name = "Nicolaso";
+
+const newName = name.replaceAll("o", "😱");
+
+console.log(name);
+console.log(newName);
+
+const arr = [1,2];
+
+arr.push(3);
+
+console.log(arr);
