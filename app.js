@@ -1148,6 +1148,7 @@ Promise.all([p1,p2]).then(console.log).catch(console.log);
 Promise.any([p1,p2]).then(console.log).catch((e) => {console.log(e.errors)});
 */
 /**********replaceAll ************ */
+/*
 const  name = "Nicolaso";
 
 const newName = name.replaceAll("o", "😱");
@@ -1160,3 +1161,24 @@ const arr = [1,2];
 arr.push(3);
 
 console.log(arr);
+*/
+/*************** at()********** */
+/*
+const arr = ["a", "b", "c", "d"];
+
+console.log(arr.at(2));
+console.log(arr[2]);
+
+console.log(arr.at(-1)); //X
+console.log(arr[-1]); //X
+*/
+
+/***************Object hasOwn******* */
+const user = {
+    name: "nico",
+    isAdmin: "hi"
+};
+
+console.log(user.hasOwnProperty("isAdmin"));
+console.log(Object.hasOwn(user, "isAdmin"));
+console.log("isAdmin" in user); 
