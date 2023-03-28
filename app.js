@@ -1174,6 +1174,7 @@ console.log(arr[-1]); //X
 */
 
 /***************Object hasOwn******* */
+/*
 const user = {
     name: "nico",
     isAdmin: "hi"
@@ -1182,3 +1183,18 @@ const user = {
 console.log(user.hasOwnProperty("isAdmin"));
 console.log(Object.hasOwn(user, "isAdmin"));
 console.log("isAdmin" in user); 
+*/
+
+/**********Error cause********** */
+try {
+    2+2;
+    throw new Error("DB Connection Failed.", {
+        cause:{
+            error:"Password is correct.",
+            value: 1234,
+            message: ["too short", "only number not ok."]
+        }
+    });
+} catch(e){
+    console.log(e.message, e.cause);
+}
