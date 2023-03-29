@@ -1186,6 +1186,7 @@ console.log("isAdmin" in user);
 */
 
 /**********Error cause********** */
+/*
 try {
     2+2;
     throw new Error("DB Connection Failed.", {
@@ -1197,4 +1198,19 @@ try {
     });
 } catch(e){
     console.log(e.message, e.cause);
+}
+*/
+/*********Class Field Declarations******* */
+class Counter {
+    constructor(){
+        this.count = 0;
+    }
+
+    plus(){
+        this.count++;
+    }
+};
+
+class Counter2 {
+    count = 0;
 }
