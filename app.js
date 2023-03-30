@@ -1201,6 +1201,7 @@ try {
 }
 */
 /*********Class Field Declarations******* */
+/*
 class Counter {
     constructor(){
         this.count = 0;
@@ -1214,3 +1215,40 @@ class Counter {
 class Counter2 {
     count = 0;
 }
+*/
+/********Private Methods and Fields***** */
+class Counter {
+    #count = 0;
+
+    get count(){
+        return this.#count;
+    }
+
+    plus() {
+        if(this.#count === 5){
+            this.#reset();
+        }else{
+            this.#count++;
+        }
+    }
+
+    #reset(){
+        this.#count = 0;
+    }
+}
+
+const c = new Counter();
+c.plus();
+c.plus();
+c.plus();
+console.log(c.count);
+c.plus();
+c.plus();
+c.plus();
+
+//c.count = 10000;
+//console.log(c.count);
+//c.#count = 10000;
+//c.#reset();
+
+console.log(c.count)
