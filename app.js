@@ -1217,6 +1217,7 @@ class Counter2 {
 }
 */
 /********Private Methods and Fields***** */
+/*
 class Counter {
     #count = 0;
 
@@ -1252,3 +1253,33 @@ c.plus();
 //c.#reset();
 
 console.log(c.count)
+*/
+/************Static Fields and Methods*********** */
+
+class Counter {
+    #count = 0;
+    static description = "Count up to five";
+    static #isMyChild(instance){
+        return instance instanceof Counter;
+    }
+    get count(){
+        return this.#count;
+    }
+
+    plus() {
+        if(this.#count === 5){
+            this.#reset();
+        }else{
+            this.#count++;
+        }
+    }
+
+    #reset(){
+        this.#count = 0;
+    }
+}
+
+const c = new Counter();
+
+//console.log(Counter.#description);
+//console.log(Counter.#isMyChild(c));
